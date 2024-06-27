@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .header, .footer {
+    background: #ffcccc;
+    flex: 1;
+  }
+  .main {
+    display: flex;
+    flex: 8;
+  }
+  .main > div, .vertical-container > div {
+    flex: 1;
+    background: #ccffcc;
+    margin: 10px;
+  }
+  .vertical-container {
+    background: #fffefe;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wide {
+    flex: 3;
+  }
+.Blok2{
+  border: 5px solid #fffefe; 
+}

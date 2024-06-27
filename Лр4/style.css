@@ -1,0 +1,15 @@
+ul.fir{
+    font-size: 200%;
+    color:blue;
+    text-decoration:underline; 
+}
+ol.fir{
+    font-size: 200%;
+    color: green; 
+    text-decoration:underline; 
+}
+dl.fir{
+    font-size: 200%;
+    color: fuchsia;
+    text-decoration:underline;
+}

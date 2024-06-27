@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с объектами Document и обработка событий</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Функция для получения информации о дате и размере HTML-документа
+            function getDocumentInfo() {
+                let info = "";
+                let docDate = new Date(document.lastModified);
+                let docSize = document.documentElement.outerHTML.length;
+                info += "Дата последнего изменения документа: " + docDate + "<br>";
+                info += "Размер документа: " + docSize + " байт<br>";
+                return info;
+            }
+
+            // Функция для многократного вывода информации через каждые 5 секунд
+            function displayInfo() {
+                let infoContainer = document.getElementById("info");
+                infoContainer.innerHTML += getDocumentInfo();
+            }
+
+            // Запуск многократного вывода информации
+            setInterval(displayInfo, 5000);
+
+            // Удаление первого элемента при щелчке по нему
+            let firstElement = document.body.firstElementChild;
+            if (firstElement) {
+                firstElement.addEventListener("click", function() {
+                    firstElement.remove();
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Бабич Денис Анатольевич</p>
+    
+    <div>27.05.2003</div>
+    
+    <img src="shep.jpg" alt="Пример изображения" width="100" height="100">
+    
+    <div id="info"></div>
+</body>
+</html>

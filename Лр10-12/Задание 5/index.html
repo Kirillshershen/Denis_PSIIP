@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа со строками STRING</title>
+</head>
+<body>
+    <h1>Работа со строками STRING</h1>
+    <p id="result"></p>
+
+    <script>
+        // Создаем строковые переменные S1 и S2
+        let S1 = "Я люблю Беларусь";
+        let S2 = "Я учусь в политехническом колледже";
+
+        // 1. Определить длину строки S1
+        let lengthS1 = S1.length;
+
+        // 2. Удалить из строки S2 подстроку "учусь"
+        let modifiedS2 = S2.replace("учусь ", "");
+
+        // 3. Заменить в строке S1 все встречающиеся буквы "ю" на "*"
+        let modifiedS1 = S1.replace(/ю/g, "*");
+
+        // Формируем вывод
+        let resultText = `
+            Длина строки S1: ${lengthS1}<br>
+            Строка S2 без подстроки "учусь": ${modifiedS2}<br>
+            Строка S1 с замененными буквами "ю": ${modifiedS1}
+        `;
+
+        // Выводим результат на страницу
+        document.getElementById('result').innerHTML = resultText;
+    </script>
+</body>
+</html>

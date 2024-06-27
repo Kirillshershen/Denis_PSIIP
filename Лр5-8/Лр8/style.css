@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  gap: 10px;
+}
+.header {
+  grid-column: 1 / 4;
+  background: #ffcccc;
+}
+.main {
+  display: contents;
+}
+.main > div {
+  background: #ccffcc;
+  margin: 10px;
+}
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vertical-container > div {
+  background: #ccffcc;
+  border: 5px solid #fffefe;
+}
+.footer {
+  grid-column: 1 / 4;
+  background: #ffcccc;
+}
+.wide {
+  grid-column: 1 / 4;
+  background: #ccffcc;
+  margin: 10px;
+}
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header, .footer {
+    flex: 1;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main > div {
+    margin: 0;
+    flex: 1;
+  }
+  .wide {
+    margin: 0;
+    flex: 1;
+  }
+  .vertical-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .vertical-container > div {
+    flex: 1;
+    margin: 0;
+  }
+  .feedback-form form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "phone"
+      "message"
+      "submit"
+      "reset";
+  }
+  .feedback-form textarea {
+    grid-column: 1;
+  }
+  .feedback-form button[type="submit"], .feedback-form button[type="reset"] {
+    grid-column: 1;
+  }
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+/* Сетка контейнера */
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  gap: 10px;
+}
+.header, .footer {
+  grid-column: 1 / 4;
+  background: #ffcccc;
+}
+.main {
+  display: contents;
+}
+.main > div {
+  background: #ccffcc;
+  margin: 10px;
+}
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vertical-container > div {
+  background: #ccffcc;
+  border: 5px solid #fffefe;
+}
+.wide {
+  grid-column: 1 / 4;
+  background: #ccffcc;
+  margin: 10px;
+}
+
+/* Микросетка для Блока 4 */
+.micro-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Форма обратной связи */
+.feedback-form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.feedback-form h2 {
+  font-size: 20px;
+}
+.feedback-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "name name"
+    "email phone"
+    "message message"
+    "submit reset";
+  gap: 10px;
+}
+.feedback-form label {
+  display: none; /* Скрываем метки */
+}
+.feedback-form input, .feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.feedback-form input {
+  height: 40px;
+}
+.feedback-form input#name {
+  grid-area: name;
+}
+.feedback-form input#email {
+  grid-area: email;
+}
+.feedback-form input#phone {
+  grid-area: phone;
+}
+.feedback-form textarea {
+  grid-area: message;
+  resize: none;
+}
+.feedback-form button {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.feedback-form button[type="submit"] {
+  background: #ff6600;
+  grid-area: submit;
+}
+.feedback-form button[type="reset"] {
+  background: #999;
+  grid-area: reset;
+}
+
+/* Карточка товара */
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.product-card h3 {
+  font-size: 18px;
+}
+.product-card p {
+  margin: 5px 0;
+}
+.product-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header, .footer {
+    flex: 1;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main > div {
+    margin: 0;
+    flex: 1;
+  }
+  .wide {
+    margin: 0;
+    flex: 1;
+  }
+  .vertical-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .vertical-container > div {
+    flex: 1;
+    margin: 0;
+  }
+  .feedback-form form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "phone"
+      "message"
+      "submit"
+      "reset";
+  }
+  .feedback-form textarea {
+    grid-column: 1;
+  }
+  .feedback-form button[type="submit"], .feedback-form button[type="reset"] {
+    grid-column: 1;
+  }
+}

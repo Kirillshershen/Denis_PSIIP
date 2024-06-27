@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>шпаргалка по тегам</title>
+  </head>
+  <body>
+    <h1>Оформление текста </h1>
+    <p>
+        <b>b - визуально выделяет текст жирным начертанием</b><br>
+        <br><strong>strong - отображает текст жирным начертанием, логически указывает на важность текста. Может быть использован для выделения ключевых слов для оптимизации поиска</strong></br>
+
+<br><i>i - задает курсивное начертание текста</i></br>
+
+<br><em>em - задает курсивное начертание текста, логически указывает на важность текста</em></br>
+
+<br><u>u - подчеркивает текст снизу</u></br>
+
+<br><pre>pre - сохраняет форматирование текста (не удаляет пробелы и переносы строк)</pre></br>
+
+<br><sup>sup - текст отображается как верхний индекс</sup></br>
+
+<br><sub>sub - текст отображается как нижний индекс</sup></br>
+
+<br><small>small - уменьшает текст на условную единицу</small></br>
+
+<br><address>address - внутри указывается адрес (физический адрес, телефон, почта), обычно отображается курсивным шрифтом</address></br>
+
+<br><mark>mark - отображает текст как выделенный</mark></br>
+
+<br><abbr>abbr - оборачивает аббревиатуру (сокращение), в атрибуте title указывается ее расшифровка, которая показывается при наведении</abbr></br>
+
+<br><kbd>kbd - отображает название клавиш или текст набранный пользователем, обычно отображается моноширинным шрифтом</kbd></br>
+
+<br><dfn>dfn - внутри пишется название нового термина, далее идет его пояснение, обычно отображается курсивным шрифтом</dfn></br>
+
+<br><ins>ins - выделяет новый текст, который был добавлен при обновлении содержания, обычно отображается как подчеркнутый текст</ins></br>
+
+<br><del>del - выделяет старый текст, который был удален при обновлении содержания, обычно отображается как зачеркнутый текст</del></br>
+
+<br><s>s - зачеркивает текст</s></br>
+    </p>
+    <h1>Списки</h1>
+      <ul>
+        <li>ggg</li>
+        <li>fff</li>
+        <li>ddd</li>
+        <li>sss</li>
+      </ul></br>
+
+      <br><ol>
+        <li>aaaa</li>
+        <li>wwww</li>
+        <li>eeee</li>
+        <li>qqqq</li>
+      </ol></br>
+
+      <br><dl>
+        <dt>w1</dt>
+          <dd>qwerty</dd>
+        <dt>w2</dt>
+          <dd>qwerty</dd>
+          <dd>qwerty</dd>
+          <dd>qwerty</dd>
+          <dd>qwerty</dd>
+      </dl></br>
+      
+    <h1>Изображения</h1>
+    <img src="img/1.png" width=“200px” height= "200px" alt="изображениe">
+    <h1>Гиперссылки</h1>
+
+    <br><ol>
+      <li><a href="#top">Якорные</a></li>
+      <li><a href="img/1.jpg">Внутренние</a> и <a href="https://www.instagram.com/chertiilla/"> внешние</a></li>
+      <li>Безанкорные и анкорные <a href="https://www.instagram.com/chertiilla/">Здесь</a></Li>
+    </ol></br>
+    <h1>Аудио</h1>
+    <audio src="music/1.mp3" controls></audio>
+    <h1>Видео</h1>
+    <video src="video/2.mp4" width="400" height="300" controls></video>
+    <h1>Таблицы</h1>
+    <table border="1">
+      <caption>Таблица</caption>
+      <tr>
+        <th>№ п/п</th>
+        <th>Название</th>
+        <th>Жанр</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Дота</td>
+        <td>Стратегия</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>BDO</td>
+        <td>MMO RPG</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>bounty</td>
+          <td>батончик</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>cuphead</td>
+          <td>аркада</td>
+        </tr>
+     </table>
+    <h1>Пользовательские формы</h1>
+    <form>
+      Введите имя:<br>
+      <input type="text" name="name" size=”15” maxlength=”20” value="" ><br>
+      Введите фамилию:<br>
+      <input type="text" name="surname" size=”20” maxlength=”25” value="" ><br>
+      <a href="#" class="knopka">Отправить</a>
+      <fieldset> 
+        <legend>Выбор пола</legend> 
+       
+        <div> 
+          <input type="checkbox" id="Женский" name="Женский" checked /> 
+          <label for="Женский">Женский</label> 
+        </div> 
+       
+        <div> 
+          <input type="checkbox" id="Мужской" name="Мужской" /> 
+          <label for="Мужской">Мужской</label> 
+        </div> 
+      </fieldset> 
+
+    <label for="email">Введите ваш email например example.com email:</label> 
+    <input type="email" id="email" pattern=".+@example\.com" size="30" required />   <br /> 
+       
+    <label for="Ваша дата рождения">Ваша дата рождения:</label> 
+    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" /> 
+     
+
+    <fieldset> 
+        <legend>Язык на котором вы говорите </legend> 
+       
+        <div> 
+          <input type="radio" id="huey" name="drone" value="huey" checked /> 
+          <label for="Русский">Русский</label> 
+        </div> 
+       
+        <div> 
+          <input type="radio" id="dewey" name="drone" value="dewey" /> 
+          <label for="Английский">Английский</label> 
+        </div> 
+       
+        <div> 
+          <input type="radio" id="louie" name="drone" value="louie" /> 
+          <label for="Итальянский">Итальянский</label> 
+    </fieldset>
+      </form>
+ </body>
+</html>

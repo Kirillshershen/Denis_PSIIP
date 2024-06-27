@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Объектная модель DOM и объект Style</title>
+    <style>
+        /* Общие стили для элементов */
+        .styled-element {
+            cursor: pointer; /* Делаем указатель мыши при наведении */
+            padding: 10px; /* Добавляем немного отступа вокруг элемента */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Функция для применения стилей к элементу после клика
+            function applyStyles() {
+                let element = document.getElementById("element2");
+                // Применяем стили
+                element.style.color = "red";
+                element.style.backgroundColor = "yellow";
+                element.style.fontWeight = "bold";
+                element.style.fontFamily = "Arial";
+                element.style.fontSize = "14px";
+                element.style.border = "2px solid blue";
+            }
+
+            // Назначаем обработчик клика для применения стилей
+            let element2 = document.getElementById("element2");
+            element2.addEventListener("click", applyStyles);
+        });
+    </script>
+</head>
+<body>
+    
+    <p>Бабич Денис Анатольевич</p>
+    
+    <div>27.05.2003</div>
+    
+    <img src="shep.jpg" alt="Пример изображения" width="100" height="100">
+    
+    <div id="element2" class="styled-element">Элемент №2</div>
+</body>
+</html>

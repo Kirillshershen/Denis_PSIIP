@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Grid и Flexbox Макет</title>
+</head>
+<body>
+<div class="container">
+  <div class="header">Шапка</div>
+  <div class="main">
+    <div style="grid-row: 2 / 4; grid-column: 1;">Блок 1<br>Добавленный текст для проверки гибкости. Этот текст должен быть достаточно длинным, чтобы проверить, как блок адаптируется к содержимому при изменении размера экрана.</div>
+    <div class="vertical-container" style="grid-row: 2 / 4; grid-column: 2;">
+      <div class="Blok2">Блок 2</div>
+      <div class="Blok2">
+        <!-- Содержимое для Блока 4 -->
+        <div class="micro-grid">
+          <!-- Форма обратной связи -->
+          <div class="feedback-form">
+            <h2>ФОРМА ОБРАТНОЙ СВЯЗИ</h2>
+            <p>* Поля обязательные для заполнения</p>
+            <form id="feedbackForm">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Имя" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <label for="phone">Телефон</label>
+              <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" placeholder="Сообщение"></textarea>
+              <button type="submit">Отправить</button>
+              <button type="reset">Сбросить</button>
+            </form>
+          </div>
+          <!-- Карточка товара -->
+          <div class="product-card">
+            <img src="D:\ПРЕДМЕТЫ\3 курс\ПССИП\Лр5-8\Лр8\сумка.jpg" alt="Сумка для ноутбука Continent">
+            <h3>Continent</h3>
+            <p>Сумка для ноутбука</p>
+            <p>15"</p>
+            <p>2 099 РУБ</p>
+            <button>Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-row: 2 / 4; grid-column: 3;">Блок 3</div>
+    <div class="wide" style="grid-row: 4 / 5;">
+      Блок 5<br>
+      <img src="D:\ПРЕДМЕТЫ\3 курс\ПССИП\Лр5-8\Лр8\сумка.jpg" alt="Сумка для ноутбука Continent" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+  <div class="main">
+    <div style="grid-row: 5 / 6; grid-column: 1;">Блок 6</div>
+    <div style="grid-row: 5 / 6; grid-column: 2;">Блок 7</div>
+    <div style="grid-row: 5 / 6; grid-column: 3;">Блок 8</div>
+  </div>
+  <div class="footer">Подвал</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

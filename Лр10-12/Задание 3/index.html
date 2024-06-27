@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с массивом</title>
+</head>
+<body>
+    <script>
+        // Формируем массив из 6 целых элементов
+        let arr = [12, 5, 8, 13, 24, 7];
+
+        // Выводим исходный массив
+        document.write("Исходный массив: " + arr + "<br>");
+
+        // Находим сумму четных элементов в массиве
+        let sumEven = arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0);
+        document.write("Сумма четных элементов: " + sumEven + "<br>");
+
+        // Находим максимальный элемент и его индекс
+        let maxElement = Math.max(...arr);
+        let maxIndex = arr.indexOf(maxElement);
+
+        // Переставляем последний и максимальный элементы местами
+        let temp = arr[arr.length - 1];
+        arr[arr.length - 1] = arr[maxIndex];
+        arr[maxIndex] = temp;
+
+        // Выводим измененный массив
+        document.write("Измененный массив: " + arr + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows-1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Injection</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <script>
+            alert("Welcome to Laboratory Work #9!");
+            var result = confirm("Would you like to know more about JS scripts?");
+            if (result) {
+                alert("I'm glad you are interested in JS scripts.");
+            } else {
+                alert("That's a pity.");
+            }
+            var name = prompt("May I know your name?", "Maxim");
+            if (name != null) {
+                alert("Welcome, " + name + "!");
+            } else {
+                alert("Invalid name format.");
+            }
+
+            function loadScript(url) {
+                var script = document.createElement('script');
+                script.src = url;
+                script.type = 'text/javascript';
+                document.head.appendChild(script);
+            }
+
+            loadScript('assets/js/dynamicScript.js');
+        </script>
+        <form id="myForm">
+            <input type="text" id="textField" name="textField" placeholder="Enter text">
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+        <a href="http://ggpk.by/Raspisanie/Files/PZT.html" onclick="alert('Redirecting to the developer’s page')">Click here</a>
+        <button onclick="executeOperators()">Execute Operators</button>
+        <div id="results"></div>
+        <img src="image.png" alt="Image"/>
+    </div>
+</body>
+</html>
